@@ -3,6 +3,8 @@
 **Split Decision · BBS × Ramp Hackathon, Round 2**
 Srishti Hazra · Riya Pallikonda · Anagha Taneja
 
+**Live demo:** https://settle-amber.vercel.app
+
 One structured invoice that fixes both sides of a B2B card payment:
 
 - **Buyers** stop splitting supplier invoices across projects by hand in spreadsheets. Settle codes every line to a project and cost code, explains why, and spreads tax and card surcharges across projects so job costs are right.
