@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Live extraction reads the invoice PDFs from disk; ship them with the serverless function.
+  outputFileTracingIncludes: { "/api/settle": ["./public/invoices/**"] },
 };
 
 export default nextConfig;

@@ -1,0 +1,16 @@
+{
+  "_note": "Checked against public 2026 guides on 2026-11-10, not legal advice. 'unclear' = sources conflict; Settle never auto-surcharges there. Verify each row against the statute before relying on it.",
+  "networkCapPct": 0.03,
+  "networkSource": "Visa caps surcharges at 3%, Mastercard at 4%; Settle uses the lower so one rule covers both.",
+  "states": {
+    "CT": { "surcharge": "banned", "sources": ["https://www.digitaltransactions.net/and-then-there-were-two-colorados-passage-of-surcharge-law-leaves-massachusetts-and-connecticut-as-only-states-with-surcharge-bans/"] },
+    "MA": { "surcharge": "banned", "sources": ["https://www.digitaltransactions.net/and-then-there-were-two-colorados-passage-of-surcharge-law-leaves-massachusetts-and-connecticut-as-only-states-with-surcharge-bans/"] },
+    "CO": { "surcharge": "capped", "capPct": 0.02, "note": "2% or actual cost, whichever is lower; must be disclosed.", "sources": ["https://sasquatchstudio.co/blog/credit-card-surcharge-laws-by-state-2026"] },
+    "CA": { "surcharge": "unclear", "note": "2026 guides disagree on whether California bans surcharges.", "sources": ["https://sasquatchstudio.co/blog/credit-card-surcharge-laws-by-state-2026", "https://ebizcharge.com/resources/templates/credit-card-surcharge-laws-by-state/"] },
+    "NY": { "surcharge": "unclear", "note": "Sources describe pricing-disclosure rules that make percentage surcharges risky.", "sources": ["https://ebizcharge.com/resources/templates/credit-card-surcharge-laws-by-state/"] },
+    "NV": { "surcharge": "allowed", "note": "Not on any ban or cap list checked.", "sources": ["https://ebizcharge.com/resources/templates/credit-card-surcharge-laws-by-state/"] },
+    "AZ": { "surcharge": "allowed", "note": "Not on any ban or cap list checked.", "sources": ["https://ebizcharge.com/resources/templates/credit-card-surcharge-laws-by-state/"] },
+    "OR": { "surcharge": "allowed", "note": "Not on any ban or cap list checked.", "sources": ["https://ebizcharge.com/resources/templates/credit-card-surcharge-laws-by-state/"] },
+    "WA": { "surcharge": "allowed", "note": "Not on any ban or cap list checked.", "sources": ["https://ebizcharge.com/resources/templates/credit-card-surcharge-laws-by-state/"] }
+  }
+}

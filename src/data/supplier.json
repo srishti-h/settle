@@ -1,0 +1,16 @@
+{
+  "company": "Volt Supply Co.",
+  "blanketSurchargePct": 0.03,
+  "accounts": [
+    { "id": "northgate", "name": "Northgate Builders", "state": "CA", "monthlyRevenue": 62000, "marginPct": 0.18, "tenureMonths": 74, "orderTrend": 0.05, "cardShare": 0.6, "avgDaysToPay": 52, "competitorNearby": true },
+    { "id": "ridgeline", "name": "Ridgeline Electric", "state": "NV", "monthlyRevenue": 9000, "marginPct": 0.08, "tenureMonths": 8, "orderTrend": 0, "cardShare": 0.9, "avgDaysToPay": 21, "competitorNearby": false },
+    { "id": "pacific-solar", "name": "Pacific Solar Installers", "state": "AZ", "monthlyRevenue": 28000, "marginPct": 0.15, "tenureMonths": 30, "orderTrend": -0.1, "cardShare": 0.85, "avgDaysToPay": 15, "competitorNearby": true },
+    { "id": "harbor-mech", "name": "Harbor Mechanical", "state": "CT", "monthlyRevenue": 6000, "marginPct": 0.07, "tenureMonths": 5, "orderTrend": 0, "cardShare": 0.95, "avgDaysToPay": 18, "competitorNearby": false },
+    { "id": "summit-hvac", "name": "Summit HVAC", "state": "CO", "monthlyRevenue": 7500, "marginPct": 0.08, "tenureMonths": 12, "orderTrend": 0, "cardShare": 0.8, "avgDaysToPay": 20, "competitorNearby": false },
+    { "id": "cascade", "name": "Cascade Property Services", "state": "OR", "monthlyRevenue": 21000, "marginPct": 0.2, "tenureMonths": 48, "orderTrend": 0.1, "cardShare": 0.4, "avgDaysToPay": 44, "competitorNearby": false },
+    { "id": "evergreen", "name": "Evergreen Landscaping", "state": "WA", "monthlyRevenue": 4500, "marginPct": 0.12, "tenureMonths": 20, "orderTrend": -0.3, "cardShare": 0.7, "avgDaysToPay": 25, "competitorNearby": true },
+    { "id": "bayline", "name": "Bayline Restaurants Group", "state": "MA", "monthlyRevenue": 15000, "marginPct": 0.1, "tenureMonths": 26, "orderTrend": 0, "cardShare": 0.9, "avgDaysToPay": 30, "competitorNearby": true },
+    { "id": "empire", "name": "Empire Signworks", "state": "NY", "monthlyRevenue": 11000, "marginPct": 0.09, "tenureMonths": 9, "orderTrend": 0, "cardShare": 0.85, "avgDaysToPay": 19, "competitorNearby": false },
+    { "id": "desert-dev", "name": "Desert Ridge Development", "state": "AZ", "monthlyRevenue": 40000, "marginPct": 0.16, "tenureMonths": 60, "orderTrend": 0, "cardShare": 0.3, "avgDaysToPay": 38, "competitorNearby": false }
+  ]
+}

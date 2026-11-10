@@ -1,0 +1,43 @@
+{
+  "company": "Northgate Builders",
+  "projects": [
+    { "id": "HOSP", "name": "St. Mary's Hospital – East Wing", "active": true },
+    { "id": "SCH", "name": "Lincoln Elementary Modernization", "active": true },
+    { "id": "WH", "name": "Bayview Distribution Warehouse", "active": true },
+    { "id": "OFC", "name": "Harbor Office Fit-out", "active": false }
+  ],
+  "costCodes": [
+    { "code": "26 05 19", "name": "Wire & cable" },
+    { "code": "26 05 33", "name": "Conduit & raceways" },
+    { "code": "26 24 16", "name": "Panelboards" },
+    { "code": "26 28 13", "name": "Breakers & fuses" },
+    { "code": "26 51 00", "name": "Interior lighting" },
+    { "code": "01 50 00", "name": "Temporary facilities & site costs" }
+  ],
+  "purchaseOrders": [
+    { "id": "PO-2201", "project": "HOSP", "costCode": "26 05 19", "skus": ["THHN-12-2500"] },
+    { "id": "PO-2207", "project": "WH", "costCode": "26 24 16", "skus": ["QO-200A-PNL"] },
+    { "id": "PO-2190", "project": "SCH", "costCode": "26 05 33", "skus": ["EMT-075-10"] }
+  ],
+  "timesheets": [
+    { "date": "2026-11-04", "project": "HOSP", "crew": "Crew A", "note": "Panel terminations, 3rd floor – 20A branch circuits" },
+    { "date": "2026-11-05", "project": "SCH", "crew": "Crew B", "note": "EMT conduit runs, classrooms 4–9" },
+    { "date": "2026-11-05", "project": "WH", "crew": "Crew C", "note": "High-bay lighting layout; fixture install starts 11/16" },
+    { "date": "2026-11-06", "project": "HOSP", "crew": "Crew A", "note": "Wire pulls, 3rd floor east corridor" }
+  ],
+  "history": [
+    { "date": "2026-08-12", "sku": "EMT-075-10", "description": "EMT conduit 3/4\" x 10 ft", "project": "SCH", "costCode": "26 05 33" },
+    { "date": "2026-09-03", "sku": "EMT-075-10", "description": "EMT conduit 3/4\" x 10 ft", "project": "SCH", "costCode": "26 05 33" },
+    { "date": "2026-10-01", "sku": "EMT-075-10", "description": "EMT conduit 3/4\" x 10 ft", "project": "SCH", "costCode": "26 05 33" },
+    { "date": "2026-08-20", "sku": "QO-120-1P", "description": "QO 20A single-pole breaker", "project": "HOSP", "costCode": "26 28 13" },
+    { "date": "2026-09-14", "sku": "QO-120-1P", "description": "QO 20A single-pole breaker", "project": "SCH", "costCode": "26 28 13" },
+    { "date": "2026-09-29", "sku": "QO-120-1P", "description": "QO 20A single-pole breaker", "project": "HOSP", "costCode": "26 28 13" },
+    { "date": "2026-10-15", "sku": "QO-120-1P", "description": "QO 20A single-pole breaker", "project": "SCH", "costCode": "26 28 13" },
+    { "date": "2026-07-30", "sku": "THHN-12-2500", "description": "THHN #12 AWG CU wire, 2,500 ft reel", "project": "WH", "costCode": "26 05 19" },
+    { "date": "2026-09-08", "sku": "THHN-12-2500", "description": "THHN #12 AWG CU wire, 2,500 ft reel", "project": "HOSP", "costCode": "26 05 19" },
+    { "date": "2026-06-18", "sku": "PULL-LUBE-5G", "description": "Wire pulling lubricant, 5 gal", "project": "OFC", "costCode": "26 05 19" },
+    { "date": "2026-08-12", "sku": "DEL-JOBSITE", "description": "Jobsite delivery", "project": "SCH", "costCode": "01 50 00" },
+    { "date": "2026-09-08", "sku": "DEL-JOBSITE", "description": "Jobsite delivery", "project": "HOSP", "costCode": "01 50 00" },
+    { "date": "2026-10-01", "sku": "DEL-JOBSITE", "description": "Jobsite delivery", "project": "WH", "costCode": "01 50 00" }
+  ]
+}
