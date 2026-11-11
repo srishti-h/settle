@@ -123,7 +123,7 @@ export function recommend(a: Account, rule: Rule | undefined, networkCapPct: num
       why: status === "banned" ? `Surcharges are banned in ${a.state}` : status === "unclear" ? `${a.state} rules unclear; needs legal review` : `Recover ${usd(recovered)}/yr, risks ${usd(churnCost(0.02 + 0.12 * s))} of lifetime value` },
     { kind: "ach_discount", label: `${ACH_DISCOUNT * 100}% discount for paying by ACH`, annualValue: -(fee - moved * rate) - moved * ACH_DISCOUNT - churnCost(0.01 * s), allowed: true,
       why: `Shifts ~${ACH_UPTAKE * 100}% of card volume to ACH; costs ${usd(moved * ACH_DISCOUNT)} in discounts, saves ${usd(moved * rate)} in fees` },
-    { kind: "fee_relief", label: `Waive the fee for net-${FAST_TERMS_DAYS} payment`, annualValue: -fee + finance, allowed: a.avgDaysToPay > 30,
+    { kind: "fee_relief", label: `No card fee if paid in ${FAST_TERMS_DAYS} days`, annualValue: -fee + finance, allowed: a.avgDaysToPay > 30,
       why: a.avgDaysToPay > 30 ? `Pays in ${a.avgDaysToPay} days today; net-${FAST_TERMS_DAYS} frees cash worth ${usd(finance)}/yr` : `Already pays in ${a.avgDaysToPay} days` },
   ];
   const pick = options.filter(o => o.allowed).sort((x, y) => y.annualValue - x.annualValue)[0];

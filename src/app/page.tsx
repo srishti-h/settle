@@ -144,7 +144,7 @@ function SplitIllustration() {
       </ul>
       <div className="mt-4 grid grid-cols-2 gap-2 text-xs">
         <div className="rounded-xl border border-white/15 p-3"><div className="text-white/50">Card fee</div><div className="mt-1 text-base num"><s className="text-white/40">$528.79</s> $437.62</div></div>
-        <div className="rounded-xl border border-white/15 p-3"><div className="text-white/50">Policy for this customer</div><div className="mt-1 text-base">Fee waived for <span className="whitespace-nowrap">net-10</span></div></div>
+        <div className="rounded-xl border border-white/15 p-3"><div className="text-white/50">Policy for this customer</div><div className="mt-1 text-base">No card fee if paid in 10 days</div></div>
       </div>
     </div>
   );
