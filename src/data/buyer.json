@@ -23,7 +23,9 @@
     { "date": "2026-11-04", "project": "HOSP", "crew": "Crew A", "note": "Panel terminations, 3rd floor – 20A branch circuits" },
     { "date": "2026-11-05", "project": "SCH", "crew": "Crew B", "note": "EMT conduit runs, classrooms 4–9" },
     { "date": "2026-11-05", "project": "WH", "crew": "Crew C", "note": "High-bay lighting layout; fixture install starts 11/16" },
-    { "date": "2026-11-06", "project": "HOSP", "crew": "Crew A", "note": "Wire pulls, 3rd floor east corridor" }
+    { "date": "2026-11-06", "project": "HOSP", "crew": "Crew A", "note": "Wire pulls, 3rd floor east corridor" },
+    { "date": "2026-11-09", "project": "HOSP", "crew": "Crew A", "note": "MC cable runs to patient rooms 301–318" },
+    { "date": "2026-11-10", "project": "SCH", "crew": "Crew B", "note": "Device rough-in: 4\" boxes and GFCIs, restrooms and science labs" }
   ],
   "history": [
     { "date": "2026-08-12", "sku": "EMT-075-10", "description": "EMT conduit 3/4\" x 10 ft", "project": "SCH", "costCode": "26 05 33" },

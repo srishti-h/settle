@@ -7,7 +7,7 @@ import fixtures from "../data/model_fixtures.json" with { type: "json" };
 import supplier from "../data/supplier.json" with { type: "json" };
 import rules from "../data/rules.json" with { type: "json" };
 
-const b = buyer as Buyer, [hero, small] = invoices as Invoice[];
+const b = buyer as Buyer, byId = (id: string) => (invoices as Invoice[]).find(i => i.id === id)!, hero = byId("INV-1042"), small = byId("INV-1043");
 const fx = fixtures as unknown as Record<string, Coded>;
 const codeAll = (inv: Invoice) => inv.lines.map(l => codeByRules(l, b) ?? acceptGuess(l, fx[`${inv.id}:${l.n}`], b));
 const pick = (id: string) => {

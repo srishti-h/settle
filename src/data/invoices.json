@@ -1,23 +1,48 @@
 [
   {
-    "id": "INV-1042",
+    "id": "INV-1045",
     "supplier": "Volt Supply Co.",
     "buyer": "Northgate Builders",
-    "date": "2026-11-06",
-    "pdf": "/invoices/INV-1042.pdf",
+    "date": "2026-11-10",
+    "status": "New",
+    "pdf": "/invoices/INV-1045.pdf",
     "lines": [
-      { "n": 1, "sku": "THHN-12-2500", "description": "THHN #12 AWG CU wire, 2,500 ft reel", "qty": 4, "uom": "reel", "unitCents": 41200, "amountCents": 164800, "taxable": true, "po": "PO-2201" },
-      { "n": 2, "sku": "EMT-075-10", "description": "EMT conduit 3/4\" x 10 ft", "qty": 300, "uom": "ea", "unitCents": 785, "amountCents": 235500, "taxable": true },
-      { "n": 3, "sku": "QO-200A-PNL", "description": "Square D QO 200A main-breaker panelboard", "qty": 3, "uom": "ea", "unitCents": 189000, "amountCents": 567000, "taxable": true, "po": "PO-2207" },
-      { "n": 4, "sku": "LED-HB-24K", "description": "LED high-bay fixture, 24,000 lm", "qty": 24, "uom": "ea", "unitCents": 21450, "amountCents": 514800, "taxable": true },
-      { "n": 5, "sku": "QO-120-1P", "description": "QO 20A single-pole breaker", "qty": 120, "uom": "ea", "unitCents": 1140, "amountCents": 136800, "taxable": true },
-      { "n": 6, "sku": "PULL-LUBE-5G", "description": "Wire pulling lubricant, 5 gal", "qty": 6, "uom": "pail", "unitCents": 6800, "amountCents": 40800, "taxable": true },
-      { "n": 7, "sku": "DEL-JOBSITE", "description": "Jobsite delivery", "qty": 1, "uom": "ea", "unitCents": 18500, "amountCents": 18500, "taxable": false }
+      {
+        "n": 1,
+        "sku": "GFCI-20A",
+        "description": "GFCI receptacle 20A, tamper-resistant",
+        "qty": 48,
+        "uom": "ea",
+        "unitCents": 2390,
+        "amountCents": 114720,
+        "taxable": true
+      },
+      {
+        "n": 2,
+        "sku": "BOX-4SQ",
+        "description": "4\" square box, 2-1/8\" deep",
+        "qty": 150,
+        "uom": "ea",
+        "unitCents": 310,
+        "amountCents": 46500,
+        "taxable": true
+      },
+      {
+        "n": 3,
+        "sku": "THHN-12-2500",
+        "description": "THHN #12 AWG CU wire, 2,500 ft reel",
+        "qty": 1,
+        "uom": "reel",
+        "unitCents": 41200,
+        "amountCents": 41200,
+        "taxable": true,
+        "po": "PO-2201"
+      }
     ],
-    "subtotalCents": 1678200,
-    "taxCents": 145224,
-    "surchargeCents": 54703,
-    "totalCents": 1878127
+    "subtotalCents": 202420,
+    "taxCents": 17712,
+    "surchargeCents": 6604,
+    "totalCents": 226736
   },
   {
     "id": "INV-1043",
@@ -26,12 +51,242 @@
     "date": "2026-11-09",
     "pdf": "/invoices/INV-1043.pdf",
     "lines": [
-      { "n": 1, "sku": "THHN-12-2500", "description": "THHN #12 AWG CU wire, 2,500 ft reel", "qty": 2, "uom": "reel", "unitCents": 41200, "amountCents": 82400, "taxable": true, "po": "PO-2201" },
-      { "n": 2, "sku": "EMT-075-10", "description": "EMT conduit 3/4\" x 10 ft", "qty": 100, "uom": "ea", "unitCents": 785, "amountCents": 78500, "taxable": true }
+      {
+        "n": 1,
+        "sku": "THHN-12-2500",
+        "description": "THHN #12 AWG CU wire, 2,500 ft reel",
+        "qty": 2,
+        "uom": "reel",
+        "unitCents": 41200,
+        "amountCents": 82400,
+        "taxable": true,
+        "po": "PO-2201"
+      },
+      {
+        "n": 2,
+        "sku": "EMT-075-10",
+        "description": "EMT conduit 3/4\" x 10 ft",
+        "qty": 100,
+        "uom": "ea",
+        "unitCents": 785,
+        "amountCents": 78500,
+        "taxable": true
+      }
     ],
     "subtotalCents": 160900,
     "taxCents": 0,
     "surchargeCents": 4827,
-    "totalCents": 165727
+    "totalCents": 165727,
+    "status": "Needs coding"
+  },
+  {
+    "id": "INV-1044",
+    "supplier": "Volt Supply Co.",
+    "buyer": "Northgate Builders",
+    "date": "2026-11-09",
+    "status": "New",
+    "pdf": "/invoices/INV-1044.pdf",
+    "lines": [
+      {
+        "n": 1,
+        "sku": "MC-12-250",
+        "description": "MC cable 12/2 AL armor, 250 ft coil",
+        "qty": 8,
+        "uom": "coil",
+        "unitCents": 21900,
+        "amountCents": 175200,
+        "taxable": true
+      },
+      {
+        "n": 2,
+        "sku": "LED-HB-24K",
+        "description": "LED high-bay fixture, 24,000 lm",
+        "qty": 12,
+        "uom": "ea",
+        "unitCents": 21450,
+        "amountCents": 257400,
+        "taxable": true
+      },
+      {
+        "n": 3,
+        "sku": "QO-120-1P",
+        "description": "QO 20A single-pole breaker",
+        "qty": 60,
+        "uom": "ea",
+        "unitCents": 1140,
+        "amountCents": 68400,
+        "taxable": true
+      }
+    ],
+    "subtotalCents": 501000,
+    "taxCents": 43838,
+    "surchargeCents": 16345,
+    "totalCents": 561183
+  },
+  {
+    "id": "INV-1042",
+    "supplier": "Volt Supply Co.",
+    "buyer": "Northgate Builders",
+    "date": "2026-11-06",
+    "pdf": "/invoices/INV-1042.pdf",
+    "lines": [
+      {
+        "n": 1,
+        "sku": "THHN-12-2500",
+        "description": "THHN #12 AWG CU wire, 2,500 ft reel",
+        "qty": 4,
+        "uom": "reel",
+        "unitCents": 41200,
+        "amountCents": 164800,
+        "taxable": true,
+        "po": "PO-2201"
+      },
+      {
+        "n": 2,
+        "sku": "EMT-075-10",
+        "description": "EMT conduit 3/4\" x 10 ft",
+        "qty": 300,
+        "uom": "ea",
+        "unitCents": 785,
+        "amountCents": 235500,
+        "taxable": true
+      },
+      {
+        "n": 3,
+        "sku": "QO-200A-PNL",
+        "description": "Square D QO 200A main-breaker panelboard",
+        "qty": 3,
+        "uom": "ea",
+        "unitCents": 189000,
+        "amountCents": 567000,
+        "taxable": true,
+        "po": "PO-2207"
+      },
+      {
+        "n": 4,
+        "sku": "LED-HB-24K",
+        "description": "LED high-bay fixture, 24,000 lm",
+        "qty": 24,
+        "uom": "ea",
+        "unitCents": 21450,
+        "amountCents": 514800,
+        "taxable": true
+      },
+      {
+        "n": 5,
+        "sku": "QO-120-1P",
+        "description": "QO 20A single-pole breaker",
+        "qty": 120,
+        "uom": "ea",
+        "unitCents": 1140,
+        "amountCents": 136800,
+        "taxable": true
+      },
+      {
+        "n": 6,
+        "sku": "PULL-LUBE-5G",
+        "description": "Wire pulling lubricant, 5 gal",
+        "qty": 6,
+        "uom": "pail",
+        "unitCents": 6800,
+        "amountCents": 40800,
+        "taxable": true
+      },
+      {
+        "n": 7,
+        "sku": "DEL-JOBSITE",
+        "description": "Jobsite delivery",
+        "qty": 1,
+        "uom": "ea",
+        "unitCents": 18500,
+        "amountCents": 18500,
+        "taxable": false
+      }
+    ],
+    "subtotalCents": 1678200,
+    "taxCents": 145224,
+    "surchargeCents": 54703,
+    "totalCents": 1878127,
+    "status": "Needs coding"
+  },
+  {
+    "id": "INV-1039",
+    "supplier": "Volt Supply Co.",
+    "buyer": "Northgate Builders",
+    "date": "2026-10-29",
+    "status": "Posted",
+    "pdf": "/invoices/INV-1039.pdf",
+    "lines": [
+      {
+        "n": 1,
+        "sku": "EMT-075-10",
+        "description": "EMT conduit 3/4\" x 10 ft",
+        "qty": 200,
+        "uom": "ea",
+        "unitCents": 785,
+        "amountCents": 157000,
+        "taxable": true
+      },
+      {
+        "n": 2,
+        "sku": "EMT-COUP-075",
+        "description": "EMT set-screw coupling 3/4\"",
+        "qty": 400,
+        "uom": "ea",
+        "unitCents": 62,
+        "amountCents": 24800,
+        "taxable": true
+      },
+      {
+        "n": 3,
+        "sku": "DEL-JOBSITE",
+        "description": "Jobsite delivery",
+        "qty": 1,
+        "uom": "ea",
+        "unitCents": 18500,
+        "amountCents": 18500,
+        "taxable": false
+      }
+    ],
+    "subtotalCents": 200300,
+    "taxCents": 15907,
+    "surchargeCents": 6486,
+    "totalCents": 222693
+  },
+  {
+    "id": "INV-1036",
+    "supplier": "Volt Supply Co.",
+    "buyer": "Northgate Builders",
+    "date": "2026-10-21",
+    "status": "Posted",
+    "pdf": "/invoices/INV-1036.pdf",
+    "lines": [
+      {
+        "n": 1,
+        "sku": "QO-200A-PNL",
+        "description": "Square D QO 200A main-breaker panelboard",
+        "qty": 1,
+        "uom": "ea",
+        "unitCents": 189000,
+        "amountCents": 189000,
+        "taxable": true,
+        "po": "PO-2207"
+      },
+      {
+        "n": 2,
+        "sku": "THHN-12-2500",
+        "description": "THHN #12 AWG CU wire, 2,500 ft reel",
+        "qty": 3,
+        "uom": "reel",
+        "unitCents": 41200,
+        "amountCents": 123600,
+        "taxable": true,
+        "po": "PO-2201"
+      }
+    ],
+    "subtotalCents": 312600,
+    "taxCents": 27353,
+    "surchargeCents": 10199,
+    "totalCents": 350152
   }
 ]
