@@ -64,9 +64,9 @@ export default function SupplierPage() {
 
 function Stat({ label, value, accent }: { label: string; value: string; accent?: boolean }) {
   return (
-    <div className={`rounded-lg border border-line p-3 ${accent ? "bg-accent-soft" : "bg-surface"}`}>
+    <div className={`rounded-lg border border-line p-3 ${accent ? "bg-lime" : "bg-surface"}`}>
       <div className="text-xs text-muted">{label}</div>
-      <div className={`mt-1 text-xl font-semibold num ${accent ? "text-accent" : ""}`}>{value}</div>
+      <div className="mt-1 text-xl font-semibold num">{value}</div>
     </div>
   );
 }

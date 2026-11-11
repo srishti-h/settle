@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #f7f7f4;
+  --bg: #f4f3ee;
   --surface: #ffffff;
-  --ink: #18181b;
-  --muted: #6b6b70;
-  --line: #e4e4de;
-  --accent: #1f6f50;
-  --accent-soft: #e3f1ea;
-  --warn: #92560e;
-  --warn-soft: #fdf1df;
+  --ink: #121212;
+  --muted: #6b6a63;
+  --line: #e2e0d7;
+  --lime: #e4f222;
+  --lime-soft: #f4f9cf;
+  --accent: #4b5800;
+  --accent-soft: #eef5c2;
+  --warn: #8a4b06;
+  --warn-soft: #fcefd9;
   --bad: #a3271f;
   --bad-soft: #fbe6e3;
 }
@@ -20,6 +22,8 @@
   --color-ink: var(--ink);
   --color-muted: var(--muted);
   --color-line: var(--line);
+  --color-lime: var(--lime);
+  --color-lime-soft: var(--lime-soft);
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
   --color-warn: var(--warn);
@@ -37,3 +41,6 @@ body {
 }
 
 .num { font-variant-numeric: tabular-nums; }
+
+/* Highlighter-pen underline used on the landing page headline. */
+.marker { background: linear-gradient(transparent 55%, var(--lime) 55%, var(--lime) 92%, transparent 92%); padding: 0 .08em; }

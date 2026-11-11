@@ -49,6 +49,8 @@ PDF ──► extract (Claude, PDF in → typed lines) ──► reconcile total
 | `src/lib/settle.test.ts` | Tests for the money math, coding tiers, model-output guard and strategy outcomes |
 | `src/lib/llm.ts` | The only file that calls Claude (extraction, line coding, customer email) |
 | `src/app/api/*` | Two routes: `/api/settle` (run an invoice), `/api/message` (draft an email) |
+| `src/app/page.tsx`, `logo.tsx` | Landing page and logo (one line forking into three projects) |
+| `src/app/invoices` | Buyer inbox |
 | `src/app/invoice/[id]` | Buyer + supplier view of one invoice |
 | `src/app/supplier` | Supplier's card policy for every customer account |
 | `src/data/*.json` | Seed data: projects, POs, timesheets, coding history, accounts, state rules |

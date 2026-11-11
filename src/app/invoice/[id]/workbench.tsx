@@ -45,11 +45,11 @@ export default function Workbench({ id }: { id: string }) {
     <div className="space-y-8">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <Link href="/" className="text-sm text-muted hover:text-ink">← Invoices</Link>
+          <Link href="/invoices" className="text-sm text-muted hover:text-ink">← Invoices</Link>
           <h1 className="mt-1 text-2xl font-semibold tracking-tight">{inv.id} · {inv.supplier} → {inv.buyer}</h1>
           <p className="mt-1 text-sm text-muted num">{inv.lines.length} lines · {money(inv.totalCents)} incl. {money(inv.surchargeCents)} card surcharge · <a className="underline" href={inv.pdf} target="_blank">view PDF</a></p>
         </div>
-        <button onClick={run} disabled={busy} className="rounded-md bg-ink px-4 py-2 text-sm font-medium text-white disabled:opacity-50">
+        <button onClick={run} disabled={busy} className="rounded-full bg-lime px-5 py-2 text-sm font-medium text-ink hover:brightness-95 disabled:opacity-50">
           {busy ? "Reading invoice…" : lines ? "Run again" : "Run Settle"}
         </button>
       </div>
@@ -110,7 +110,7 @@ export default function Workbench({ id }: { id: string }) {
               </table>
             </div>
             <div className="flex flex-wrap items-center gap-3">
-              <button onClick={() => setPosted(true)} disabled={pending > 0} className="rounded-md bg-accent px-4 py-2 text-sm font-medium text-white disabled:opacity-40">
+              <button onClick={() => setPosted(true)} disabled={pending > 0} className="rounded-full bg-lime px-5 py-2 text-sm font-medium text-ink hover:brightness-95 disabled:bg-line disabled:text-muted">
                 {pending ? `Confirm ${pending} line${pending > 1 ? "s" : ""} to post` : "Approve & post to ledger"}
               </button>
               {posted && <a className="text-sm text-accent underline" href={csv(inv, split)} download={`${inv.id}-journal.csv`}>Download journal entries (CSV)</a>}
