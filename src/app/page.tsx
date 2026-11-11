@@ -8,11 +8,28 @@ import { Mark } from "./logo";
 const rows = (supplier.accounts as Account[]).map(a => recommend(a, (rules.states as Record<string, Rule>)[a.state], rules.networkCapPct));
 const yearlyGain = rows.reduce((t, r) => t + r.pick.annualValue - r.options.find(o => o.kind === "surcharge")!.annualValue, 0);
 
+const B = ({ children }: { children: React.ReactNode }) => <strong className="font-semibold text-ink">{children}</strong>;
+const L = ({ children }: { children: React.ReactNode }) => <strong className="font-semibold text-lime">{children}</strong>;
+
 const STEPS = [
-  { title: "Read", body: "Claude reads the supplier's PDF into typed line items. Quantities, prices and totals must reconcile to the cent, or nothing moves." },
-  { title: "Code", body: "PO matches and consistent history are coded by plain rules. Only the hard lines go to the model, which has to cite its evidence. Under 70% confidence, a person decides." },
-  { title: "Split", body: "Tax spreads over taxable lines, card fees over everything, each project to the exact cent. Journal entries come out ready to post." },
-  { title: "Settle", body: "The same line items ride along with the card payment for lower commercial rates, and the supplier gets a fee policy for this customer that's checked against state law." },
+  { title: "Read", body: <>Claude reads the supplier&rsquo;s PDF into typed line items. Quantities, prices and totals must <B>reconcile to the cent</B>, or nothing moves.</> },
+  { title: "Code", body: <>PO matches and consistent history are coded by <B>plain rules</B>. Only the hard lines go to the model, which has to <B>cite its evidence</B>. Under 70% confidence, <B>a person decides</B>.</> },
+  { title: "Split", body: <>Tax spreads over taxable lines, card fees over everything, <B>each project to the exact cent</B>. Journal entries come out ready to post.</> },
+  { title: "Settle", body: <>The same line items ride with the card payment for <B>lower commercial rates</B>, and the supplier gets a <B>fee policy for this customer</B>, checked against state law.</> },
+];
+
+const OLD = [
+  <>One invoice covers three projects, so someone <B>splits it line by line in a spreadsheet</B>.</>,
+  <>The card surcharge <B>lands in overhead</B>, and no project&rsquo;s costs are quite right.</>,
+  <>The card payment carries no purchase detail, so the supplier <B>pays the top rate</B>.</>,
+  <>Every customer gets <B>the same 3% surcharge</B>, loyal accounts included, <B>even in states that ban it</B>.</>,
+];
+
+const NEW = [
+  <>Lines are <L>coded automatically</L>, each with a reason, and a person <L>only sees the doubtful ones</L>.</>,
+  <>Tax and fees are split across projects <L>to the exact cent</L>.</>,
+  <><L>Structured line items</L> go out with the card payment, so it qualifies for <L>lower rates</L>.</>,
+  <>Each customer gets <L>its own policy</L>: surcharge, absorb, ACH discount, or a waived fee for faster payment.</>,
 ];
 
 export default function Home() {
@@ -25,7 +42,7 @@ export default function Home() {
             Every invoice, <span className="marker">split right</span> and paid smart.
           </h1>
           <p className="max-w-xl text-lg text-muted">
-            Settle reads a supplier invoice once and puts it to work on both sides. Buyers get every line coded to the right project. Suppliers get cheaper card payments and a fee policy that fits each customer.
+            Settle reads a supplier invoice once and puts it to work on <B>both sides</B>. <B>Buyers</B> get every line coded to the right project. <B>Suppliers</B> get cheaper card payments and a fee policy that fits each customer.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/invoice/INV-1042" className="rounded-full bg-lime px-5 py-2.5 font-medium text-ink hover:brightness-95">Run the demo invoice →</Link>
@@ -38,20 +55,14 @@ export default function Home() {
       <section className="grid gap-4 md:grid-cols-2">
         <div className="rounded-2xl border border-line bg-surface p-6">
           <h2 className="text-sm font-medium uppercase tracking-widest text-muted">The old way</h2>
-          <ul className="mt-4 space-y-3 text-[15px]">
-            <li>One invoice covers three projects, so someone splits it line by line in a spreadsheet.</li>
-            <li>The card surcharge lands in overhead, and no project’s costs are quite right.</li>
-            <li>The card payment carries no purchase detail, so the supplier pays the top rate.</li>
-            <li>Every customer gets the same 3% surcharge, loyal accounts included, even in states that ban it.</li>
+          <ul className="mt-4 space-y-3 text-[15px] text-muted">
+            {OLD.map((t, i) => <li key={i} className="flex gap-3"><span aria-hidden className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-bad-soft text-xs font-bold text-bad">✕</span><span>{t}</span></li>)}
           </ul>
         </div>
         <div className="rounded-2xl bg-ink p-6 text-white">
           <h2 className="text-sm font-medium uppercase tracking-widest text-lime">With Settle</h2>
-          <ul className="mt-4 space-y-3 text-[15px] text-white/90">
-            <li>Lines are coded automatically, with a reason for each, and a person only sees the doubtful ones.</li>
-            <li>Tax and fees are split across projects to the exact cent.</li>
-            <li>Structured line items go out with the card payment.</li>
-            <li>Each customer gets its own policy: surcharge, absorb, ACH discount, or a waived fee for faster payment.</li>
+          <ul className="mt-4 space-y-3 text-[15px] text-white/80">
+            {NEW.map((t, i) => <li key={i} className="flex gap-3"><span aria-hidden className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-lime text-xs font-bold text-ink">✓</span><span>{t}</span></li>)}
           </ul>
         </div>
       </section>
@@ -133,7 +144,7 @@ function SplitIllustration() {
       </ul>
       <div className="mt-4 grid grid-cols-2 gap-2 text-xs">
         <div className="rounded-xl border border-white/15 p-3"><div className="text-white/50">Card fee</div><div className="mt-1 text-base num"><s className="text-white/40">$528.79</s> $437.62</div></div>
-        <div className="rounded-xl border border-white/15 p-3"><div className="text-white/50">Policy for this customer</div><div className="mt-1 text-base">Fee waived for net-10</div></div>
+        <div className="rounded-xl border border-white/15 p-3"><div className="text-white/50">Policy for this customer</div><div className="mt-1 text-base">Fee waived for <span className="whitespace-nowrap">net-10</span></div></div>
       </div>
     </div>
   );

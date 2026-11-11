@@ -42,5 +42,9 @@ body {
 
 .num { font-variant-numeric: tabular-nums; }
 
+/* No one-word last lines: balance headings, smooth paragraph breaks. */
+h1, h2, h3 { text-wrap: balance; }
+p, li { text-wrap: pretty; }
+
 /* Highlighter-pen underline used on the landing page headline. */
 .marker { background: linear-gradient(transparent 55%, var(--lime) 55%, var(--lime) 92%, transparent 92%); padding: 0 .08em; }
