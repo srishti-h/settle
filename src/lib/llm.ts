@@ -7,16 +7,19 @@ const KEY = process.env.ANTHROPIC_API_KEY;
 const MODEL = "claude-sonnet-5-5";
 export const LIVE = Boolean(KEY);
 
-// Forced tool call = schema-shaped JSON back, no parsing of free text.
+// Tool call = schema-shaped JSON back, no parsing of free text. This model rejects a forced
+// tool_choice, so the prompt asks for the call and we fail loudly if it doesn't come.
 async function callTool<T>(content: unknown[], tool: { name: string; description: string; input_schema: object }): Promise<T> {
   const res = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: { "x-api-key": KEY!, "anthropic-version": "2023-06-01", "content-type": "application/json" },
-    body: JSON.stringify({ model: MODEL, max_tokens: 4096, tools: [tool], tool_choice: { type: "tool", name: tool.name }, messages: [{ role: "user", content }] }),
+    body: JSON.stringify({ model: MODEL, max_tokens: 4096, tools: [tool], messages: [{ role: "user", content: [...content, { type: "text", text: `Answer only by calling the ${tool.name} tool.` }] }] }),
   });
   if (!res.ok) throw new Error(`Claude API ${res.status}: ${await res.text()}`);
   const body = await res.json();
-  return body.content.find((c: { type: string }) => c.type === "tool_use").input as T;
+  const call = body.content.find((c: { type: string; name?: string }) => c.type === "tool_use" && c.name === tool.name);
+  if (!call) throw new Error(`Model answered without calling ${tool.name}`);
+  return call.input as T;
 }
 
 const lineSchema = {
